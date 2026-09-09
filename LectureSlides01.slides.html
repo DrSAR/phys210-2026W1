@@ -7885,6 +7885,38 @@ E) More than 100,000</p>
 </div>
 </div>
 </div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Optional:-run-the-same-notebook-on-your-own-laptop-(uv)">Optional: run the same notebook on your own laptop (<code>uv</code>)<a class="anchor-link" href="#Optional:-run-the-same-notebook-on-your-own-laptop-(uv)">¶</a></h2><p>Jupyter Open stays the course default — this is for working offline.</p>
+<p><strong>1. Install <code>uv</code> (once)</strong></p>
+<ul>
+<li>macOS — in <strong>Terminal</strong>:</li>
+</ul>
+<pre><code>curl -LsSf https://astral.sh/uv/install.sh | sh
+</code></pre>
+<ul>
+<li>Windows — in <strong>PowerShell</strong>:</li>
+</ul>
+<pre><code>powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+</code></pre>
+<p>Close the terminal and open a new one afterwards.</p>
+<p><strong>2. Fire up Jupyter for a single notebook</strong></p>
+<p><code>cd</code> into the folder that holds the file, then:</p>
+<pre><code>uv run --with jupyter jupyter lab HW01.ipynb
+</code></pre>
+<ul>
+<li><code>uv</code> downloads Python and Jupyter on the fly — no <code>pip</code>, no environment to manage.</li>
+<li>Need libraries? <code>uv run --with jupyter --with numpy --with matplotlib jupyter lab HW01.ipynb</code></li>
+<li><code>Ctrl-C</code> in the terminal shuts the server down.</li>
+</ul>
+</div>
+</div>
+</div>
 </div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
