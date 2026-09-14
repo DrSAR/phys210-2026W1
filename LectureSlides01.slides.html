@@ -7449,6 +7449,28 @@ main {
 <li>Group activities</li>
 <li>Getting started with Jupyter and your Day 01 Homework</li>
 </ol>
+<style>
+/* PHYS 210 slide-fit rules. Lives in the notebook so the presenter build
+   (docs/) and the student build (docs-public/) are always identical.
+   reveal.js clips anything outside its 960x700 logical canvas
+   (section { overflow: hidden }), and nbconvert gives code no wrapping rule,
+   so a long source line would silently run off the right-hand edge. */
+.reveal pre,
+.reveal pre code,
+.reveal .jp-OutputArea-output pre {
+  white-space: pre-wrap;      /* long lines wrap instead of being clipped */
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.reveal .jp-InputArea,
+.reveal .jp-InputArea-editor,
+.reveal .cm-editor {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.reveal table { font-size: 0.62em; }   /* the conversion tables */
+</style>
 </div>
 </div>
 </div>
@@ -7905,7 +7927,17 @@ E) More than 100,000</p>
 <pre><code>powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 </code></pre>
 <p>Close the terminal and open a new one afterwards.</p>
-<p><strong>2. Fire up Jupyter for a single notebook</strong></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Optional:-run-the-same-notebook-on-your-own-laptop-(uv)-%E2%80%94-continued">Optional: run the same notebook on your own laptop (<code>uv</code>) — continued<a class="anchor-link" href="#Optional:-run-the-same-notebook-on-your-own-laptop-(uv)-%E2%80%94-continued">¶</a></h2><p><strong>2. Fire up Jupyter for a single notebook</strong></p>
 <p><code>cd</code> into the folder that holds the file, then:</p>
 <pre><code>uv run --with jupyter jupyter lab HW01.ipynb
 </code></pre>
