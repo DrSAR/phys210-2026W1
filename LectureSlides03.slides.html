@@ -7449,6 +7449,7 @@ main {
 </li>
 <li>Reading 03 recap, Q&amp;A and polling questions</li>
 <li>The accumulator pattern (you will use this constantly)</li>
+<li>Notebook hygiene: why the same notebook gives two answers</li>
 <li>Group Worksheet 03</li>
 </ol>
 </div>
@@ -7700,77 +7701,6 @@ E) <code>['a', 'c', 'e', 'g']</code></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Discussed-on-piazza">Discussed on piazza<a class="anchor-link" href="#Discussed-on-piazza">¶</a></h3><p>Iterating over the elements of a list/string vs over the a range object based on the length of the string/list</p>
-</div>
-</div>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">mystring</span> <span class="o">=</span> <span class="s1">'ABC'</span>
-
-<span class="k">for</span> <span class="n">x1</span> <span class="ow">in</span> <span class="n">mystring</span><span class="p">:</span> <span class="c1"># Iterating over the string</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">mystring</span><span class="p">)</span> <span class="p">):</span> <span class="c1"># Iterating over the range</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">mystring</span><span class="p">[</span><span class="n">x2</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Also note that we can also use <code>enumerate</code> to do both things at once</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">mystring</span> <span class="o">=</span> <span class="s1">'ABC'</span>
-
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mystring</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"i ="</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">"; element ="</span><span class="p">,</span><span class="n">element</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Questions about <code>break</code> (and let's also discuss <code>continue</code>):</strong> <br/>
 <code>continue</code> drops you to the end of the current iteration and starts the next iteration (if there is one). <code>break</code> forces you to exit the loop. Each of them do so immediately when they are encountered. The following code prints <code>0, 1, 3, 4</code>.  <code>2</code> isn’t printed because of the continue, and 5 deosn't happen because the loop is terminated.</p>
 </div>
@@ -7934,6 +7864,204 @@ E) 1</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Notebook-hygiene:-a-notebook-has-a-state">Notebook hygiene: a notebook has a <em>state</em><a class="anchor-link" href="#Notebook-hygiene:-a-notebook-has-a-state">¶</a></h2><p>The cell you see is not the whole story. What matters is <strong>which cells you ran, and in what order</strong>.</p>
+<p>Two cells — run them top to bottom:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now press <code>Shift+Enter</code> on that second cell <strong>four more times</strong>.</p>
+<p>Same code. Different answer.</p>
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Two-submissions-of-the-same-notebook">Two submissions of the <em>same</em> notebook<a class="anchor-link" href="#Two-submissions-of-the-same-notebook">¶</a></h2><table>
+<thead>
+<tr>
+<th></th>
+<th>Submission A</th>
+<th>Submission B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a = 1</code> / <code>result = 1</code></td>
+<td><code>In [1]</code></td>
+<td><code>In [1]</code></td>
+</tr>
+<tr>
+<td><code>result = result + a</code></td>
+<td><code>In [2]</code> → <strong>2</strong></td>
+<td><code>In [6]</code> → <strong>6</strong></td>
+</tr>
+<tr>
+<td><code>assert result == 2</code></td>
+<td><code>In [3]</code> → check passed</td>
+<td><code>In [7]</code> → <strong>AssertionError</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The code is <strong>byte-identical</strong>. The <code>In [n]</code> numbers are the only visible clue.</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="The-In-%5Bn%5D-numbers-are-your-receipt">The <code>In [n]</code> numbers are your receipt<a class="anchor-link" href="#The-In-%5Bn%5D-numbers-are-your-receipt">¶</a></h2><p>A notebook that reproduces reads <strong><code>1, 2, 3, ...</code></strong> straight down the page.</p>
+<p>If the numbers jump, skip, or restart, the outputs you are looking at were produced by <strong>code that is no longer on the screen</strong>.</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="This-morning's-submissions">This morning's submissions<a class="anchor-link" href="#This-morning's-submissions">¶</a></h2><p>From the notebooks you handed in <strong>today</strong> (aggregate, nobody named):</p>
+<ul>
+<li><strong>Preclass 03:</strong> only <strong>20 of 110</strong> showed a clean restart-and-run-all.</li>
+<li><strong>Homework 02:</strong> <strong>27</strong> submissions contain two <em>different</em> versions of the same pasted block — an early test cell that is wrong and a later one that is right.</li>
+<li><strong>31</strong> submissions had at least one code cell that was never run at all.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="The-fix-is-one-menu-item">The fix is one menu item<a class="anchor-link" href="#The-fix-is-one-menu-item">¶</a></h2><p><strong>Kernel → Restart Kernel and Run All Cells…</strong></p>
+<p>Do it <strong>before every export and every submission</strong>.</p>
+<ul>
+<li>It throws away every variable and starts clean.</li>
+<li>If it runs top to bottom with no error, your notebook is real.</li>
+<li>If it breaks, you just found a bug that was hiding in your kernel.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="One-more-thing:-import-this">One more thing: <code>import this</code><a class="anchor-link" href="#One-more-thing:-import-this">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">this</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Where does that text actually live? Every module knows its own file:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Open that file. The poem is <strong>not</strong> stored as the text you just read.</p>
+<p><strong>Worksheet 03, Task 4 (bonus):</strong> work out how the decoding works.</p>
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="The-rest-of-today">The rest of today<a class="anchor-link" href="#The-rest-of-today">¶</a></h1><ul>
 <li>Group Worksheet 03 (link on Canvas → opens on Jupyter Open)<ul>
 <li>one driver per group, swap each task; checkpoint with a TA when done</li>
@@ -7954,7 +8082,7 @@ E) 1</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Before-you-leave">Before you leave<a class="anchor-link" href="#Before-you-leave">¶</a></h2><ul>
 <li><strong>Worksheet 03</strong> — finish with your group, get a TA checkpoint</li>
-<li><strong>Homework 03</strong> due Mon Sep 21, 9 am (on Canvas)</li>
+<li><strong>Homework 03</strong> due Mon Sep 21, 9 am (on Canvas) — <strong>Restart Kernel and Run All Cells before you export</strong></li>
 <li><strong>Preclass 04</strong> due Mon Sep 21, 9 am</li>
 <li><strong>PrairieLearn</strong> — if you did not click the Canvas link today, do it tonight. Three practice quizzes are waiting there (T01–T03); practice Test 1 opens Mon Sep 21</li>
 <li><strong>Test 1</strong> window Sep 28–Oct 2 — if you did not get a slot booked in class, book tonight at us.prairietest.com</li>
