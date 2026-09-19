@@ -7443,11 +7443,33 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="PHYS-210-Day-04---Sep-21,-2026">PHYS 210 Day 04 - Sep 21, 2026<a class="anchor-link" href="#PHYS-210-Day-04---Sep-21,-2026">¶</a></h1><p>Agenda:</p>
 <ol>
-<li>Announcements: <strong>Practice Test 1 is out</strong> · Test 1 window starts <strong>Mon Sep 28</strong></li>
+<li>Announcements: <strong>Practice Test 1 is out</strong> · Test 1 window starts <strong>Mon Sep 28</strong> · Homework 04 + Preclass 05 due <strong>Wed 9 am</strong></li>
 <li>Reading 04 recap, Q&amp;A and polling questions (functions!)</li>
 <li>Scope, defaults, and <code>return</code> vs <code>print</code></li>
 <li>Group Worksheet 04</li>
 </ol>
+<style>
+/* PHYS 210 slide-fit rules. Lives in the notebook so the presenter build
+   (docs/) and the student build (docs-public/) are always identical.
+   reveal.js clips anything outside its 960x700 logical canvas
+   (section { overflow: hidden }), and nbconvert gives code no wrapping rule,
+   so a long source line would silently run off the right-hand edge. */
+.reveal pre,
+.reveal pre code,
+.reveal .jp-OutputArea-output pre {
+  white-space: pre-wrap;      /* long lines wrap instead of being clipped */
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.reveal .jp-InputArea,
+.reveal .jp-InputArea-editor,
+.reveal .cm-editor {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.reveal table { font-size: 0.62em; }   /* the conversion tables */
+</style>
 </div>
 </div>
 </div>
@@ -7723,7 +7745,7 @@ E) 10</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Poll Q5:</strong> Which of the following is a legal function definition?</p>
+<p><strong>Poll Q3:</strong> Which of the following is a legal function definition?</p>
 <p>A) <code>def can(x,y)</code><br/>
 B) <code>def you():</code><br/>
 C) <code>define spot(x, y):</code><br/>
@@ -7755,9 +7777,9 @@ D) <code>def me?(x,y):</code></p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Practice-Test-1-is-live-%E2%80%94-and-Test-1-is-next-week">Practice Test 1 is live — and Test 1 is next week<a class="anchor-link" href="#Practice-Test-1-is-live-%E2%80%94-and-Test-1-is-next-week">¶</a></h2><ul>
-<li><strong>Practice Test 1</strong> in PrairieLearn: same question styles and difficulty as the real thing, unlimited attempts, instant feedback — new random numbers every try</li>
-<li><strong>Test 1</strong>: 50 min at ORCA, window Mon Sep 28 – Fri Oct 2, covers Days 01–04</li>
-<li>Not booked yet? <strong>us.prairietest.com</strong> — do it today</li>
+<li><strong>Practice Test 1</strong> in PrairieLearn (Canvas → PHYS 210 → <strong>PrairieLearn</strong> in the left menu): 7 questions from the same generators as the real thing, unlimited attempts, instant feedback — new random numbers every try</li>
+<li><strong>Test 1</strong>: 50 min at ORCA (ICICS, 201-2366 Main Mall), window <strong>Mon Sep 28 – Fri Oct 2</strong>, covers Days 01–04</li>
+<li>Not booked yet? <strong>us.prairietest.com</strong> — do it today. No PHYS 210 listed there? Click the Canvas PrairieLearn link first, then reload</li>
 <li>At ORCA: Python question pages, no internet, no AI tools — exactly like the practice test</li>
 </ul>
 </div>
@@ -7771,9 +7793,26 @@ D) <code>def me?(x,y):</code></p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="The-rest-of-today">The rest of today<a class="anchor-link" href="#The-rest-of-today">¶</a></h1><ul>
-<li>Group Worksheet 04 (functions) — driver swaps, TA checkpoints as usual</li>
-<li>Homework 04 due Wed 9 am</li>
+<li>Group Worksheet 04 (functions) — link on Canvas; one driver per group, swap each task; checkpoint with a TA when done</li>
+<li>Then Homework 04 (due Wed Sep 23, 9 am)</li>
 <li>Before Wednesday: <strong>Preclass 05 (NumPy arrays)</strong>, due Wed 9 am</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Before-you-leave">Before you leave<a class="anchor-link" href="#Before-you-leave">¶</a></h2><ul>
+<li><strong>Worksheet 04</strong> — finish with your group, get a TA checkpoint</li>
+<li><strong>Homework 04</strong> due Wed Sep 23, 9 am (on Canvas) — <strong>Restart Kernel and Run All Cells before you export</strong></li>
+<li><strong>Preclass 05 (NumPy arrays)</strong> due Wed Sep 23, 9 am</li>
+<li><strong>Practice Test 1</strong> in PrairieLearn — do it once in 50 minutes before your Test 1 slot</li>
+<li><strong>Test 1</strong> window Mon Sep 28 – Fri Oct 2 — no slot yet? book tonight at us.prairietest.com</li>
 </ul>
 </div>
 </div>
