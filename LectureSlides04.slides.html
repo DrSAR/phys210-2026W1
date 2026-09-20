@@ -7669,7 +7669,8 @@ E) 10</p>
 <li>A <strong>fruitful</strong> function ends with <code>return &lt;something&gt;</code> — you can assign its result</li>
 <li>A <strong>void</strong> function has no <code>return</code> (or a bare <code>return</code>) — it <em>does</em> something (e.g. prints), and hands back <code>None</code></li>
 <li>A <code>return</code> also <strong>ends</strong> the function — code after it never runs</li>
-<li><em>"Explicit is better than implicit."</em> — <code>import this</code>. An implicit <code>None</code> is the classic bug: <code>y = my_void_function(x)</code>, then wondering why <code>y</code> is <code>None</code></li>
+<li><em>"Explicit is better than implicit."</em> — every path should end in a <code>return</code> <strong>you wrote</strong> (an <code>else:</code> branch, not a fall-through). Falling off the end hands back <code>None</code> silently</li>
+<li>Classic bug: <code>y = my_void_function(x)</code>, then wondering why <code>y</code> is <code>None</code></li>
 <li>Rule of thumb: <strong>compute with returns; print only at the edges</strong><ul>
 <li><em>edges</em> = where your program meets a human: the last cell, a summary line, a debug print</li>
 <li>everything in between hands values back, so it can be reused, tested, and plotted later</li>
