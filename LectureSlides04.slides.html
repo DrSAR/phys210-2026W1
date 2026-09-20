@@ -7441,7 +7441,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="PHYS-210-Day-04---Sep-21,-2026">PHYS 210 Day 04 - Sep 21, 2026<a class="anchor-link" href="#PHYS-210-Day-04---Sep-21,-2026">¶</a></h1><p>Agenda:</p>
+<h1 id="PHYS-210-Day-04">PHYS 210 Day 04<a class="anchor-link" href="#PHYS-210-Day-04">¶</a></h1><h3 id="2026---09---21">2026 - 09 - 21<a class="anchor-link" href="#2026---09---21">¶</a></h3><p>Agenda:</p>
 <ol>
 <li>Announcements: <strong>Practice Test 1 is out</strong> · Test 1 window starts <strong>Mon Sep 28</strong> · Homework 04 + Preclass 05 due <strong>Wed 9 am</strong></li>
 <li>Reading 04 recap, Q&amp;A and polling questions (functions!)</li>
@@ -7491,12 +7491,11 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Poll Q1:</strong> What are the possible return values of the following function?
-You may assume <code>x</code> is a number.</p>
+<p><strong>Poll Q1:</strong> What are the possible return values of this function? (<code>x</code> is a number)</p>
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7504,11 +7503,11 @@ You may assume <code>x</code> is a number.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sign</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bigly_number</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -7521,27 +7520,12 @@ You may assume <code>x</code> is a number.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>A) <code>-1</code> or <code>1</code><br/>
-B) <code>-1</code> or <code>0</code> or <code>1</code><br/>
-C) <code>-1</code> or <code>1</code> or <code>None</code><br/>
-D) <code>-1</code> or <code>1</code> or an empty string<br/>
-E) Syntax error</p>
+<p>A) <code>True</code> or <code>False</code>    B) <code>True</code>, <code>False</code> or <code>0</code>    C) <code>True</code>, <code>False</code> or <code>None</code>    D) <code>True</code>, <code>False</code> or <code>""</code>    E) Syntax error</p>
+<p><strong>Student Q:</strong> <em>"What is the difference between a void function that prints something and one that prints <code>None</code>?"</em></p>
 </div>
 </div>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This previous question was meant to address a common question / point of confusion, e.g.<br/></p>
-<p><strong>Q:</strong> Can you go over the void functions a bit in class? I'm confused about the difference between a void function that prints something vs one that prints None.</p>
-</div>
-</div>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7549,7 +7533,7 @@ E) Syntax error</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sign</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">bigly_number</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7701,7 +7685,11 @@ E) 10</p>
 <li>A <strong>void</strong> function has no <code>return</code> (or a bare <code>return</code>) — it <em>does</em> something (e.g. prints), and hands back <code>None</code></li>
 <li>A <code>return</code> also <strong>ends</strong> the function — code after it never runs</li>
 <li>Classic bug: <code>y = my_void_function(x)</code> then wondering why <code>y</code> is <code>None</code></li>
-<li>Rule of thumb in this course: <strong>compute with returns; print only at the edges</strong></li>
+<li>Rule of thumb: <strong>compute with returns; print only at the edges</strong><ul>
+<li><em>edges</em> = where your program meets a human: the last cell, a summary line, a debug print</li>
+<li>everything in between hands values back, so it can be reused, tested, and plotted later</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -7746,11 +7734,41 @@ E) 10</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Poll Q3:</strong> Which of the following is a legal function definition?</p>
-<p>A) <code>def can(x,y)</code><br/>
-B) <code>def you():</code><br/>
-C) <code>define spot(x, y):</code><br/>
-D) <code>def me?(x,y):</code></p>
+<h2 id="...-except-when-you-hand-over-a-list-(or-an-array)">... except when you hand over a list (or an array)<a class="anchor-link" href="#...-except-when-you-hand-over-a-list-(or-an-array)">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">double_first</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>      <span class="c1"># changes the caller's list!</span>
+    <span class="k">return</span> <span class="n">values</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">double_first</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                        <span class="c1"># [2, 2, 3]  -- data changed</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>The function gets the <strong>same</strong> list, not a copy (<code>b = a</code>, remember?). Changing an <em>element</em> changes it for the caller too</li>
+<li>Deal with it: <strong>don't modify arguments</strong> — build a new list and return it, or <code>values = values.copy()</code> first</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7761,10 +7779,27 @@ D) <code>def me?(x,y):</code></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="An-honest-note-about-this-stretch-of-the-course">An honest note about this stretch of the course<a class="anchor-link" href="#An-honest-note-about-this-stretch-of-the-course">¶</a></h2><ul>
+<p><strong>Poll Q3:</strong> Which of the following is a legal function definition?</p>
+<p>A) <code>def does(x,y)</code><br/>
+B) <code>def print():</code><br/>
+C) <code>define work(x,y):</code><br/>
+D) <code>def here?(x):</code><br/>
+E) None of the above</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="A-note-about-this-stretch-of-the-course">A note about this stretch of the course<a class="anchor-link" href="#A-note-about-this-stretch-of-the-course">¶</a></h2><ul>
 <li>Days 02–06 are the <strong>steepest</strong> part of the term — a torrent of new syntax</li>
-<li>This is normal. It gets easier once the pieces start clicking together</li>
+<li>This is normal, especially if you have had little exposure to Python or programming before. It gets easier once the pieces click together</li>
 <li>Do the practice questions in PrairieLearn — they are the same style as Test 1</li>
+<li>Reassess whether group work is working for you</li>
 <li>Stuck ≠ failing: Piazza, your TAs and class time exist precisely for this</li>
 </ul>
 </div>
@@ -7778,10 +7813,9 @@ D) <code>def me?(x,y):</code></p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Practice-Test-1-is-live-%E2%80%94-and-Test-1-is-next-week">Practice Test 1 is live — and Test 1 is next week<a class="anchor-link" href="#Practice-Test-1-is-live-%E2%80%94-and-Test-1-is-next-week">¶</a></h2><ul>
-<li><strong>Practice Test 1</strong> in PrairieLearn (Canvas → PHYS 210 → <strong>PrairieLearn</strong> in the left menu): 7 questions from the same generators as the real thing, unlimited attempts, instant feedback — new random numbers every try</li>
+<li><strong>Practice Test 1</strong> in PrairieLearn (Canvas → PHYS 210 → <strong>PrairieLearn</strong> in the left menu): 7 questions from the same generators as the real thing, unlimited attempts, instant feedback</li>
 <li><strong>Test 1</strong>: 50 min at ORCA (ICICS, 201-2366 Main Mall), window <strong>Mon Sep 28 – Fri Oct 2</strong>, covers Days 01–04</li>
-<li>Not booked yet? <strong>us.prairietest.com</strong> — do it today. No PHYS 210 listed there? Click the Canvas PrairieLearn link first, then reload</li>
-<li>At ORCA: Python question pages, no internet, no AI tools — exactly like the practice test</li>
+<li>At ORCA: Python question pages, no internet, no AI tools -- exactly like the practice test</li>
 </ul>
 </div>
 </div>
@@ -7793,27 +7827,11 @@ D) <code>def me?(x,y):</code></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="The-rest-of-today">The rest of today<a class="anchor-link" href="#The-rest-of-today">¶</a></h1><ul>
-<li>Group Worksheet 04 (functions) — link on Canvas; one driver per group, swap each task; checkpoint with a TA when done</li>
-<li>Then Homework 04 (due Wed Sep 23, 9 am)</li>
-<li>Before Wednesday: <strong>Preclass 05 (NumPy arrays)</strong>, due Wed 9 am</li>
-</ul>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Before-you-leave">Before you leave<a class="anchor-link" href="#Before-you-leave">¶</a></h2><ul>
-<li><strong>Worksheet 04</strong> — finish with your group, get a TA checkpoint</li>
-<li><strong>Homework 04</strong> due Wed Sep 23, 9 am (on Canvas) — <strong>Restart Kernel and Run All Cells before you export</strong></li>
+<h1 id="The-rest-of-today-%E2%80%94-and-before-you-leave">The rest of today — and before you leave<a class="anchor-link" href="#The-rest-of-today-%E2%80%94-and-before-you-leave">¶</a></h1><ul>
+<li><strong>Group Worksheet 04</strong> (functions) — link on Canvas; one driver per group, swap each task; checkpoint with a TA when done</li>
+<li><strong>Homework 04</strong> due Wed Sep 23, 9 am — <strong>Restart Kernel and Run All Cells before you export</strong></li>
 <li><strong>Preclass 05 (NumPy arrays)</strong> due Wed Sep 23, 9 am</li>
-<li><strong>Practice Test 1</strong> in PrairieLearn — do it once in 50 minutes before your Test 1 slot</li>
-<li><strong>Test 1</strong> window Mon Sep 28 – Fri Oct 2 — no slot yet? book tonight at us.prairietest.com</li>
+<li><strong>Practice Test 1</strong> — do it once in 50 minutes before your Test 1 slot</li>
 </ul>
 </div>
 </div>
