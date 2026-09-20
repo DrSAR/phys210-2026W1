@@ -7699,6 +7699,7 @@ E) 10</p>
 <h2 id="Void-vs-fruitful-functions">Void vs fruitful functions<a class="anchor-link" href="#Void-vs-fruitful-functions">¶</a></h2><ul>
 <li>A <strong>fruitful</strong> function ends with <code>return &lt;something&gt;</code> — you can assign its result</li>
 <li>A <strong>void</strong> function has no <code>return</code> (or a bare <code>return</code>) — it <em>does</em> something (e.g. prints), and hands back <code>None</code></li>
+<li>A <code>return</code> also <strong>ends</strong> the function — code after it never runs</li>
 <li>Classic bug: <code>y = my_void_function(x)</code> then wondering why <code>y</code> is <code>None</code></li>
 <li>Rule of thumb in this course: <strong>compute with returns; print only at the edges</strong></li>
 </ul>
