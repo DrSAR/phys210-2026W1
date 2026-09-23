@@ -7504,7 +7504,7 @@ main {
 <p><strong>Arrays</strong></p>
 <p>Terminology:</p>
 <ul>
-<li>rank, row, column, length, axis</li>
+<li>axis, row, column, length</li>
 </ul>
 <p>Array attributes:</p>
 <ul>
@@ -7589,7 +7589,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Q:</strong> I don't understand why the answer to Self-assessment Q1 is 2</p>
+<p><strong>Q (Preclass Q1, Piazza @24):</strong> "From linear algebra I read <code>[[1,2],[3,7],[-9,0]]</code> as a 3-column matrix, so its dimension is 3. Why does numpy say 2?"</p>
 <p>What will the following code print?</p>
 </div>
 </div>
@@ -7619,11 +7619,63 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We can rearrange the presentation to see that it is a 2D array with shape (3,3), meaning 3 rows and 3 columns</p>
-<pre><code>[[1, 2, 3], 
- [4, 5, 6], 
- [7, 8, 9]]
+<p><strong>"Dimension" means two different things</strong></p>
+<ul>
+<li><em>Linear algebra:</em> dimension = how many <strong>components</strong> a vector has. <code>[1, 2, 3]</code> lives in $\mathbb{R}^3$.</li>
+<li><em>numpy:</em> <code>ndim</code> = how many <strong>indices</strong> you need to name one element: <code>a[i]</code> → 1, <code>a[i, j]</code> → 2, <code>a[i, j, k]</code> → 3. Same thing as the number of <strong>axes</strong>, or the depth of <code>[</code>.</li>
+<li>The linear-algebra sizes are not lost: they sit in <strong><code>shape</code></strong>, one entry per axis.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>object</th>
+<th>linear algebra</th>
+<th><code>ndim</code></th>
+<th><code>shape</code></th>
+<th><code>size</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[1, 2, 3]</code></td>
+<td>vector in $\mathbb{R}^3$</td>
+<td>1</td>
+<td><code>(3,)</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>[[1,2],[3,4]]</code></td>
+<td>$2 \times 2$ matrix</td>
+<td>2</td>
+<td><code>(2, 2)</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>[[1,2],[3,7],[-9,0]]</code></td>
+<td>$3 \times 2$ matrix</td>
+<td>2</td>
+<td><code>(3, 2)</code></td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>ndim</code> counts axes · <code>shape</code> counts along each axis · <code>size</code> counts elements.</strong> Say <em>axes</em> for <code>ndim</code>; keep <em>dimension</em> for $\mathbb{R}^n$.</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Read the brackets</strong></p>
+<pre><code>a = [[1, 2, 3],      &lt;- 2 opening brackets -&gt; ndim = 2  (two indices: a[row, col])
+     [4, 5, 6],      &lt;- 3 rows, 3 columns  -&gt; shape = (3, 3)
+     [7, 8, 9]]      &lt;- 9 numbers          -&gt; size = 9
 </code></pre>
+<p>Preclass Q1 = <strong>2</strong>. Check: <code>a[1, 2]</code> → 6 — two indices, two axes.</p>
 </div>
 </div>
 </div>
@@ -7634,7 +7686,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Let's spend a bit of time reviewing dimensions and array indexing using a helpful visual resource: <a href="https://www.pythoninformer.com/python-libraries/numpy/index-and-slice/">https://www.pythoninformer.com/python-libraries/numpy/index-and-slice/</a></p>
+<p>Let's spend a bit of time reviewing axes and array indexing using a helpful visual resource: <a href="https://www.pythoninformer.com/python-libraries/numpy/index-and-slice/">https://www.pythoninformer.com/python-libraries/numpy/index-and-slice/</a></p>
 </div>
 </div>
 </div>
@@ -7720,7 +7772,7 @@ E)  2</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">A</span><span class="p">))</span> <span class="c1"># shape is the dimensions of the array</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">A</span><span class="p">))</span> <span class="c1"># shape: length along each axis (rows, columns)</span>
 <span class="n">C2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">A</span><span class="p">))</span> 
 <span class="nb">print</span><span class="p">(</span><span class="n">C2</span><span class="p">)</span>
 </pre></div>
