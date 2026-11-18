@@ -7848,28 +7848,6 @@ D) Python creates an empty file <code>resuts.csv</code> and <code>data</code> is
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ca921a1e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Project-A:-what-Restart-&amp;-Run-All-showed">Project A: what Restart &amp; Run All showed<a class="anchor-link" href="#Project-A:-what-Restart-&amp;-Run-All-showed">¶</a></h2><ul>
-<li>25 of the first 28 notebooks ran top to bottom. <strong>3 stopped on a file that was never uploaded</strong>: a <code>.wav</code>, a <code>.png</code>, a module</li>
-<li>The notebook was fine on your laptop. The file never left it</li>
-<li>Project B: <strong>ship the file</strong> (upload it too) or <strong>make it</strong> in an earlier cell. Test with Restart &amp; Run All</li>
-<li>A file name without a folder means: next to the notebook. Check before you read:</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'no file called'</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s1">'- run the produce step first'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ec35ba8c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
